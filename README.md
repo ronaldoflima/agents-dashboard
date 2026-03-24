@@ -2,6 +2,8 @@
 
 > **Beta** — This project is in early development.
 
+![screenshot](screenshot.png)
+
 A dashboard for visualizing AI agent information. The goal is to evolve into a full panel with various metrics and data, but v1 was built focusing on what mattered most at the time: **viewing and managing agent memories**.
 
 ## Features (v1)
