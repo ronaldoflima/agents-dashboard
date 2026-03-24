@@ -4,10 +4,16 @@ import os from "os";
 
 const CLAUDE_PROJECTS_DIR = path.join(os.homedir(), ".claude", "projects");
 
-const KNOWN_PATH_SEGMENTS = new Set([
-  "users", "ronaldo", "limapx.center", "pessoal", "projects",
-  "px", "private", "var", "folders", "tmp",
-]);
+function buildKnownSegments(): Set<string> {
+  const segments = new Set(["private", "var", "folders", "tmp"]);
+  const homeSegments = os.homedir().split(path.sep).filter(Boolean);
+  for (const seg of homeSegments) {
+    segments.add(seg.toLowerCase());
+  }
+  return segments;
+}
+
+const KNOWN_PATH_SEGMENTS = buildKnownSegments();
 
 export function extractProjectName(slug: string): string {
   const parts = slug.replace(/^-/, "").split("-");

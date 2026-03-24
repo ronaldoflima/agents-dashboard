@@ -110,12 +110,20 @@ export default function Home() {
   };
 
   return (
-    <main className="max-w-7xl mx-auto px-4 py-8 space-y-6">
+    <main className="max-w-7xl mx-auto px-6 py-8 space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Agents Dashboard</h1>
+        <div>
+          <h1 className="text-xl font-semibold tracking-tight" style={{ color: "#f0f0f0" }}>
+            Agents Dashboard
+          </h1>
+          <p className="text-sm mt-0.5" style={{ color: "#666" }}>
+            {memories.length} {memories.length === 1 ? "memória" : "memórias"}
+          </p>
+        </div>
         <button
           onClick={() => setModalMemory("new")}
-          className="px-4 py-2 text-sm text-white bg-blue-600 rounded-lg hover:bg-blue-700"
+          style={{ background: "#2563eb", color: "#fff" }}
+          className="px-4 py-2 text-sm rounded-lg hover:opacity-90 transition-opacity font-medium"
         >
           + Nova Memória
         </button>
@@ -135,7 +143,9 @@ export default function Home() {
       />
 
       {loading ? (
-        <div className="text-center py-12 text-gray-400">Carregando...</div>
+        <div className="text-center py-16 text-sm" style={{ color: "#555" }}>
+          Carregando...
+        </div>
       ) : (
         <MemoryGrid
           memories={memories}

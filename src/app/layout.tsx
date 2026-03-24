@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Toaster } from "react-hot-toast";
+import ToasterProvider from "@/components/ToasterProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,10 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <body className="bg-gray-50 text-gray-900 antialiased">
+    <html lang="pt-BR" suppressHydrationWarning>
+      <body className="antialiased" suppressHydrationWarning>
         {children}
-        <Toaster position="bottom-right" />
+        <ToasterProvider />
       </body>
     </html>
   );
