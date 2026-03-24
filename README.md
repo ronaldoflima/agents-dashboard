@@ -1,15 +1,15 @@
 # agents-dashboard
 
-> **Beta** — Este projeto está em fase inicial de desenvolvimento.
+> **Beta** — This project is in early development.
 
-Dashboard para visualização de informações de agentes de IA. A ideia é evoluir para um painel completo com diversas métricas e dados, mas a v1 foi construída focando no que era mais relevante no momento: **visualização e gerenciamento de memórias** dos agentes.
+A dashboard for visualizing AI agent information. The goal is to evolve into a full panel with various metrics and data, but v1 was built focusing on what mattered most at the time: **viewing and managing agent memories**.
 
-## Funcionalidades (v1)
+## Features (v1)
 
-- Listagem de projetos escaneados localmente
-- Visualização de memórias por projeto
-- Filtros e busca de memórias
-- Criação, edição e remoção de memórias via modal
+- List locally scanned projects
+- View memories per project
+- Filter and search memories
+- Create, edit, and delete memories via modal
 
 ## Stack
 
@@ -17,11 +17,11 @@ Dashboard para visualização de informações de agentes de IA. A ideia é evol
 - TypeScript
 - Tailwind CSS
 
-## Rodando localmente
+## Running locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-Acesse [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000).
