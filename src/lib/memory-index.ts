@@ -14,7 +14,7 @@ export async function reconcileIndex(memoryDir: string): Promise<void> {
     try {
       const content = await fs.readFile(path.join(memoryDir, entry.name), "utf-8");
       const { data } = matter(content);
-      const description = data.description || data.name || entry.name;
+      const description = data.description || "";
       lines.push(`- [${entry.name}](${entry.name}) — ${description}`);
     } catch {
       lines.push(`- [${entry.name}](${entry.name})`);
